@@ -1,9 +1,10 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "elias-gatsby-blog",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Elias' Gatsby Blog",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "homepage": "https://bosselijah.github.io/blog",
+  "author": "Elias Bruhn",
   "dependencies": {
     "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^3.4.0",
@@ -16,6 +17,7 @@
     "gatsby-source-filesystem": "^3.4.0",
     "gatsby-transformer-remark": "^4.1.0",
     "gatsby-transformer-sharp": "^3.4.0",
+    "gh-pages": "^3.1.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -35,7 +37,8 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -r https://$GH_TOKEN@github.com/lirantal/dockly.git"
   },
   "repository": {
     "type": "git",
